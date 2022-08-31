@@ -10,6 +10,7 @@ c.execute('''CREATE TABLE IF NOT EXISTS login_info(
 connection.commit()
 
 
+
 print('made connection to db')
 def init():
     c.execute('DROP TABLE login_info')
