@@ -25,8 +25,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: run server
-      run: python3 main.py
+    - name: run docker
+      run: |
+        docker run application
+#    - name: run server
+#      run: python3 main.py
 #    - name : Deploy to Heroku
 #      env:
 #        HEROKU_API_TOKEN: ${{secrets.HEROKU_API_TOCKEN}}
